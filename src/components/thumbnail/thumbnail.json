@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_thumbnail_thumbnails",
+  "info": {
+    "displayName": "Thumbnail",
+    "icon": "file-image"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

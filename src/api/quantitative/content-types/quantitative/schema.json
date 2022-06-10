@@ -1,0 +1,154 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quantitatives",
+  "info": {
+    "singularName": "quantitative",
+    "pluralName": "quantitatives",
+    "displayName": "quantitative",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "abnormal"
+      ],
+      "required": true,
+      "private": true
+    },
+    "min_value": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float",
+      "private": true
+    },
+    "max_value": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float",
+      "private": true
+    },
+    "note": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "private": true
+    },
+    "cause": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "private": true
+    },
+    "recommend": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "private": true
+    },
+    "references": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    },
+    "medical_test": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::medical-test.medical-test",
+      "private": true
+    },
+    "unit": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "G_L",
+        "T_L",
+        "mmol_L",
+        "umol_L",
+        "U_L",
+        "cell_uL",
+        "g_L",
+        "mg_L",
+        "mg_mmol",
+        "COI",
+        "IU_L",
+        "pH",
+        "dv_L",
+        "mg_dL",
+        "mcg_dL",
+        "kU_L",
+        "percent",
+        "L_L",
+        "fL",
+        "pg",
+        "s",
+        "pg_mL"
+      ]
+    },
+    "test_result": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "positive",
+        "negative",
+        "âm tính",
+        "dương tính"
+      ]
+    },
+    "diseases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::disease.disease"
+    }
+  }
+}

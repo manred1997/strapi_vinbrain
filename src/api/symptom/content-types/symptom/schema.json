@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "symptoms",
+  "info": {
+    "singularName": "symptom",
+    "pluralName": "symptoms",
+    "displayName": "symptom",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "overview": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": false,
+      "private": true
+    },
+    "synonym": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json",
+      "private": true
+    },
+    "update_by": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Vu",
+        "Nam",
+        "Minh"
+      ],
+      "default": "Vu"
+    },
+    "belongs_to": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::symptom-category.symptom-category"
+    },
+    "diseases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::disease.disease",
+      "inversedBy": "has_symptoms"
+    }
+  }
+}
