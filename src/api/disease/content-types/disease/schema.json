@@ -128,7 +128,7 @@
       "type": "richtext",
       "private": true
     },
-    "reference": {
+    "references": {
       "pluginOptions": {
         "i18n": {
           "localized": true
