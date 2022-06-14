@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_contact_about_us_contacts",
+  "info": {
+    "displayName": "contact"
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "hotline": {
+      "type": "string"
+    },
+    "address": {
+      "type": "richtext"
+    }
+  }
+}
